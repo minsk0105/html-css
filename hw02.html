@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar 만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav > ul {
+            box-sizing: border-box;
+            border-radius: 15px;
+            margin: 10px;
+            width: 500px;
+            height: 65px;
+            background-color: #67f45d;
+        }
+        .nav > ul > li {
+            position: relative;
+            display: inline-block;
+            top: 22px;
+            left: 44px;
+        }
+        .nav > ul > li > a {
+            font-weight: 700;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #c7c7c7;
+            margin-right: 6px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #a5a5a5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">list1</a></li>
+            <li><a href="#">list2</a></li>
+            <li><a href="#">list3</a></li>
+            <li><a href="#">list4</a></li>
+            <li><a href="#">list5</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
