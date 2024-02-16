@@ -9,6 +9,13 @@
             margin: 0;
             padding: 0;
         }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
         #wrap {
             width: 100%;
         }
@@ -24,11 +31,13 @@
             background-color: #F2F3F5;
             margin: 0 auto;
             top: 80px;
+            display: flex;
         }
         #content .logo {
             position: absolute;
             top: 110px;
             font-size: 65px;
+            margin-left: -40px;
         }
         #content .coment {
             position: absolute;
@@ -38,20 +47,267 @@
             font-size: 28px;
             line-height: 32px;
             width: 500px;
-            margin-left: -11px;
+            margin-left: -50px;
+        }
+        #content .mainbox {
+            width: 396px;
+            height: 496px;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            margin-right: -30px;
+        }
+        #content .mainbox .top {
+            width: 396px;
+            height: 346px;
+            background-color: #fff;
+            box-shadow:
+            0 2px 4px rgba(0, 0, 0, .1),
+            0 8px 16px rgba(0, 0, 0, .1);
+            border-radius: 8px;
+            padding-top: 10px;  
+        }
+        .top .id {
+            width: 364px;
+            margin: 0 auto;
+            padding: 6px 0;
+        }
+        .top .id .inputtext {
+            display: inline-block;
+            width: 330px;
+            font-size: 17px;
+            padding: 14px 16px;
+            border-radius: 6px;
+            border: 1px solid #dddfe2;
+            color: #1d2129;
+            height: 22px;
+        }
+        .top .login {
+            margin: 0 auto;
+            padding-top: 6px;
+        }
+        .top .login .login {
+            display: block;
+            border-radius: 6px;
+            border: none;
+            width: 364px;
+            background-color: #0866ff;
+            font-size: 20px;
+            font-weight: 1000;
+            line-height: 35px;
+            padding-bottom: 3px;
+            cursor: pointer;
+        }
+        .top .login .login:hover {
+            background-color: #2578fe;
+        }
+        .top .forget {
+            display: block;
+            width: 396px;
+            margin-top: 16px;
+            text-align: center;
+        }
+        .top .forget a {
+            color: #0866ff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .top .line {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 16px;
+            align-items: center;
+        }
+        .top .newid {
+            display: block;
+            width: 396px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .top .newid .newname {
+            border: none;
+            border-radius: 6px;
+            background-color: #47b72a;
+            font-size: 17px;
+            font-weight: 1000;
+            line-height: 48px;
+            padding: 0 16px;
+            cursor: pointer;
+        }
+        .top .newid .newname:hover {
+            background-color: #59b941;
+        }
+        #content .mainbox .bottom {
+            margin-top: 25px;
+            text-align: center;
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .bottom a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+        }
+        #footer {
+            width: 100%;
+            height: 180px;
+        }
+        #pagefooter {
+            width: 980px;
+            height: 150px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: relative;
+            top: 15px;
+        }
+        .languages {
+            padding-top: 8px;
+            font-size: 12px;
+            font-family: inherit;
+        }
+        .languages > li {
+            display: inline-block;
+            padding-left: 10px;
+            color: #737373;
+        }
+        #contentCurve {
+            border-bottom: 1px solid #dddfe2;
+            font-size: 1px;
+            height: 8px;
+            margin-bottom: 8px;
+        }
+        .list > li {
+            display: inline-block;
+            padding-left: 20px;
+            margin-left: -10px;
+            color: #737373;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="main">
-            <div class="content1">
-                <h1 class="logo" style="color: #1877F2;">facebook</h1>
+            <div id="content">
+                <h1 class="logo" style="color: #1877F2;">
+                    facebook
+                </h1>
                 <h2 class="coment">
-                    Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.</h2>
+                    Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.
+                </h2>
+                <div class="mainbox">
+                    <div class="top">
+                        <div class="id">
+                            <input type="text" class="inputtext" placeholder="이메일 또는 전화번호">
+                        </div>
+                        <!-- //id -->
+
+                        <div class="id">
+                            <input type="password" class="inputtext" placeholder="비밀번호">
+                        </div>
+                        <!-- //id -->
+
+                        <div class="login">
+                            <button value="submit" class="login" style="color: white;">로그인</button>
+                        </div>
+                        <!-- //login -->
+
+                        <div class="forget">
+                            <a href="#">비밀번호를 잊으셨나요?</a>
+                        </div>
+                        <!-- //forget -->
+
+                        <div class="line">
+                        </div>
+                        <!-- //line -->
+
+                        <div class="newid">
+                            <button value="1" class="newname" style="color: white;">새 계정 만들기</button>
+                        </div>
+                        <!-- //newid -->
+
+                    </div>
+                    <!-- //top -->
+
+                    <div class="bottom">
+                        유명인, 브랜드 또는 비즈니스를 위한
+                        <a href="#">페이지 만들기</a>
+                        .
+                    </div>
+                    <!-- //bottom -->
+
+                </div>
+                <!-- //mainbox -->
+
             </div>
+            <!-- //content -->
+
         </div>
-        <div id="footer"></div>
+        <!-- //main -->
+
+        <div id="footer">
+            <div id="pagefooter">
+                <ul class="languages">
+                    <li>한국어</li>
+                    <li><a href="#" title="English (US)">English (US)</a></li>
+                    <li><a href="#" title="Vietnamese">Vietnamese</a></li>
+                    <li><a href="#" title="Indonesian">Bahasa Indonesia</a></li>
+                    <li><a href="#" title="Thai">Thai</a></li>
+                    <li><a href="#" title="Spanish">Spanish</a></li>
+                    <li><a href="#" title="chinese">chinese</a></li>
+                    <li><a href="#" title="Japanese">Japanese</a></li>
+                    <li><a href="#" title="Portuguese">Portuguese</a></li>
+                    <li><a href="#" title="French">French</a></li>
+                    <li><a href="#" title="Deutsch">Deutsch</a></li>
+                </ul>
+                <div id="contentCurve">
+                </div>
+                <!-- //contentCurve -->
+
+                <div id="serve">
+                    <ul class="list">
+                        <li><a href="#" title="Facebook에 가입하기">가입하기</a></li>
+                        <li><a href="#" title="Facebook에 로그인">로그인</a></li>
+                        <li><a href="#" title="Messenger를 확인하세요.">Messenger</a></li>
+                        <li><a href="#" title="Android용 Facebook Lite">Facebook Lite</a></li>
+                        <li><a href="#" title="동영상에서 둘러보기">동영상</a></li>
+                        <li><a href="#" title="Facebook에서 다양한 명소를 확인해보세요.">장소</a></li>
+                        <li><a href="#" title="Facebook에서 게임을 확인해보세요.">게임</a></li>
+                        <li><a href="#" title="Facebook Marketplace를 통해 물품을 거래해보세요.">Marketplace</a></li>
+                        <li><a href="#" title="Meta Pay에 대해 더 알아보기">Meta Pay</a></li>
+                        <li><a href="#" title="Meta 결제">Meta 스토어</a></li>
+                        <li><a href="#" title=" Meta Quest에 대해 더 알아보기">Meta Quest</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">Meta AI로 상상하기</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">Instagram</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">Threads</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">기부 캠페인</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">서비스</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">투표 정보 센터</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">개인정보처리방침</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">개인정보 보호 센터</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">그룹</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">정보</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">광고 만들기</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">페이지 만들기</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">개발자</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">채용 정보</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">쿠키</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">AdChoices</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">이용 약관</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">고객 센터</a></li>
+                        <li><a href="#" title="Facebook에 가입하기">연락처 업로드 및 비사용자</a></li>
+                    </ul>
+                </div>
+                <!-- //serve -->
+
+            </div>
+            <!-- //pagefooter -->
+
+        </div>
+        <!-- //footer -->
+
     </div>
+    <!-- //wrap -->
+
 </body>
 </html>
