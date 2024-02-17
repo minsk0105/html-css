@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position으로 웹사이트 구현하기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #wrap {
+            width: 100%;
+            height: 900px;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #7984a4;
+        }
+        #header .search {
+            position: absolute;
+            top: 12px;
+            right: 33px;
+        }
+        .search .inputtext {
+            width: 150px;
+            padding: 6px 10px;
+            border: 1px solid #737373;
+            border-radius: 20px;
+            font-size: 80%;
+            font-weight: 600;
+            color: #737373;
+        }
+        #header .logo {
+            display: inline-block;
+            position: relative;
+            top: 15px;
+            left: 20px;
+            font-size: 300%;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        .nav > ul {
+            position: absolute;
+            right: 20px;
+        }
+        .nav > ul > li {
+            display: inline-block;
+            padding-right: 10px;
+        }
+        .nav > ul > li > a {
+            box-sizing: border-box;
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: #556aaa;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #6576ab;
+        }
+        #main {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            background-color: #53596c;
+        }
+        .txtbox1 {
+            position: absolute;
+            top: 156px;
+            right: 270px;
+            text-align: center;
+            font-size: 200%;
+            font-weight: 700;
+            background-color: #53596c;
+            color: aliceblue;
+        }
+        .txtbox2 {
+            position: absolute;
+            top: 350px;
+            left: 350px;
+            font-size: 200%;
+            font-weight: 700;
+            background-color: #53596c;
+            color: aliceblue;
+        }
+        .aside {
+            position: absolute;
+            right: 60px;
+            width: 10%;
+            height: 100%;
+            display: flex;
+        }
+        .aside .aside1 {
+            width: 33.3333%;
+            height: 100%;
+            background-color: #83899c;
+        }
+        .aside .aside2 {
+            width: 33.3333%;
+            height: 100%;
+            background-color: aliceblue;
+        }
+        .aside .aside3 {
+            width: 33.3333%;
+            height: 100%;
+            background-color: #737373;
+        }
+        #main > img {
+            position: absolute;
+            width: 35%;
+            margin: 50px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgba(46, 45, 45, 0.5);
+        }
+        img:nth-of-type(2) {
+            position: absolute;
+            right: 200px;
+            top: 150px;
+        }
+        #section {
+            width: 100%;
+            height: 300px;
+            background-color: #919191;
+        }
+        #footer {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: #efefef;
+        }
+        .coment {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #000000;
+            padding: 5px 0;
+        }
+        .coment a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="search">
+                <input type="text" class="inputtext" name="q" autocomplete="off" placeholder="검색">
+            </div>
+            <h1 class="logo" style="color: white;">177cm</h1>
+            <nav class="nav">
+                <ul class="menu" style="color: white;">
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">WOMEN</a></li>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">INTERIOR</a></li>
+                    <li><a href="#">KITCHEN</a></li>
+                    <li><a href="#">ELECTRONICS</a></li>
+                    <li><a href="#">DIGITAL</a></li>
+                    <li><a href="#">BEAUTY</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <div class="txtbox1">backpack</div>
+            <div class="txtbox2">sneakers</div>
+            <aside class="aside">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+                <div class="aside3"></div>
+            </aside>
+            <img src="vans image.jpeg" alt="반스 스니커즈">
+            <img src="jansport.jpeg" alt="잔스포츠 백팩">
+        </div>
+        <div id="section"></div>
+        <div id="footer">
+            <div class="coment" style="color: #b4b4b4;">
+                FASHION WEB MAGAZINE / LIFE STYLE SELECT SHOP
+                <a href="#">WWW.177CM.COM</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
