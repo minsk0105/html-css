@@ -23,7 +23,7 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #7984a4;
+            background-color: #f4f4f4;
         }
         #header .search {
             position: absolute;
@@ -45,7 +45,7 @@
             top: 15px;
             left: 20px;
             font-size: 300%;
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
         }
         .nav > ul {
             position: absolute;
@@ -57,30 +57,52 @@
         }
         .nav > ul > li > a {
             box-sizing: border-box;
+            border: 1px solid #737373;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
             padding: 5px 15px;
             border-radius: 20px;
             text-align: center;
-            background-color: #556aaa;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+            background-color: #fff;
         }
         .nav > ul > li > a:hover {
-            background-color: #6576ab;
+            background-color: #f4f4f4;
+        }
+        #slider {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .txtbox {
+            width: 700px;
+            font-size: 150%;
+            font-weight: 100;
+            text-align: center;
+            cursor: pointer;
+            color: #737373;
+        }
+        .txtbox:hover {
+            color: #fff;
         }
         #main {
             position: relative;
             width: 100%;
             height: 600px;
             overflow: hidden;
-            background-color: #53596c;
+            background-color: #fff;
         }
         .txtbox1 {
             position: absolute;
-            top: 156px;
+            top: 145px;
             right: 270px;
             text-align: center;
             font-size: 200%;
             font-weight: 700;
-            background-color: #53596c;
-            color: aliceblue;
+            background-color: #fff;
+            color: #000000;
         }
         .txtbox2 {
             position: absolute;
@@ -88,37 +110,22 @@
             left: 350px;
             font-size: 200%;
             font-weight: 700;
-            background-color: #53596c;
-            color: aliceblue;
+            background-color: #fff;
+            color: #000000;
         }
         .aside {
             position: absolute;
+            top: -60px;
             right: 60px;
             width: 10%;
             height: 100%;
-            display: flex;
-        }
-        .aside .aside1 {
-            width: 33.3333%;
-            height: 100%;
-            background-color: #83899c;
-        }
-        .aside .aside2 {
-            width: 33.3333%;
-            height: 100%;
-            background-color: aliceblue;
-        }
-        .aside .aside3 {
-            width: 33.3333%;
-            height: 100%;
-            background-color: #737373;
         }
         #main > img {
             position: absolute;
             width: 35%;
             margin: 50px;
-            border-radius: 20px;
-            box-shadow: 2px 2px 2px rgba(46, 45, 45, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(46, 45, 45, 1);
         }
         img:nth-of-type(2) {
             position: absolute;
@@ -128,13 +135,14 @@
         #section {
             width: 100%;
             height: 300px;
-            background-color: #919191;
+            background-color: #efefef;
         }
         #footer {
             position: relative;
             width: 100%;
             height: 200px;
-            background-color: #efefef;
+            background-color: #f5f5f5;
+            font-size: 80%;
         }
         .coment {
             position: absolute;
@@ -154,9 +162,9 @@
             <div class="search">
                 <input type="text" class="inputtext" name="q" autocomplete="off" placeholder="검색">
             </div>
-            <h1 class="logo" style="color: white;">177cm</h1>
+            <h1 class="logo" style="color: black;">177cm</h1>
             <nav class="nav">
-                <ul class="menu" style="color: white;">
+                <ul class="menu" style="color: black;">
                     <li><a href="#">BEST</a></li>
                     <li><a href="#">WOMEN</a></li>
                     <li><a href="#">MEN</a></li>
@@ -168,19 +176,23 @@
                 </ul>
             </nav>
         </div>
+        <div id="slider">
+            <div class="txtbox">
+                177CM PURSUES SIMPLICITY AND PERFECTION
+            </div>
+        </div>
         <div id="main">
             <div class="txtbox1">backpack</div>
             <div class="txtbox2">sneakers</div>
             <aside class="aside">
-                <div class="aside1"></div>
-                <div class="aside2"></div>
-                <div class="aside3"></div>
+                <img src="applepencil.jpeg" alt="applepencil">
             </aside>
             <img src="vans image.jpeg" alt="반스 스니커즈">
             <img src="jansport.jpeg" alt="잔스포츠 백팩">
         </div>
         <div id="section"></div>
         <div id="footer">
+            본사: 대전광역시 / 문의전화: 032-123-5678
             <div class="coment" style="color: #b4b4b4;">
                 FASHION WEB MAGAZINE / LIFE STYLE SELECT SHOP
                 <a href="#">WWW.177CM.COM</a>
