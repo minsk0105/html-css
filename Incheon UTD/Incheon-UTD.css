@@ -91,7 +91,7 @@ a {
 .nav > ul > li::after {
     position: absolute;
     content: "";
-    top: 9px;
+    top: 12px;
     right: 0;
     border-right: 2px solid gray;
     height: 14px;
