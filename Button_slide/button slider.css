@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+  }
+  
+  li {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider {
+    position: relative;
+    width: 1320px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .slider input[type=radio] {
+    display: none;
+  }
+  
+  .box {
+    width: 1320px;
+    height: 300px;
+    display: flex;
+  }
+  
+  .box > li {
+    position: absolute;
+    left: 1320px;
+    width: 1320px;
+    height: 300px;
+    transition-delay: 1s;
+  }
+  
+  .box div {
+    width: 1320px;
+    height: 300px;
+  }
+  
+  .button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+  }
+  
+  .button label {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  #sld1:checked ~ .button label:nth-child(1) {
+    background-color: white;
+  }
+  
+  #sld2:checked ~ .button label:nth-child(2) {
+    background-color: white;
+  }
+  
+  #sld3:checked ~ .button label:nth-child(3) {
+    background-color: white;
+  }
+  
+  #sld4:checked ~ .button label:nth-child(4) {
+    background-color: white;
+  }
+
+  #sld1:checked ~ .box > li:nth-child(1) {
+    left: 0;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  
+  #sld2:checked ~ .box > li:nth-child(2) {
+    left: 0;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  
+  #sld3:checked ~ .box > li:nth-child(3) {
+    left: 0;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  
+  #sld4:checked ~ .box > li:nth-child(4) {
+    left: 0;
+    transition: 0.7s;
+    z-index: 1;
+  }
