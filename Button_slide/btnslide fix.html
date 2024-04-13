@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우 버튼 슬라이드 고정</title>
+    <link rel="stylesheet" href="btnslide fix.css">
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="slide">
+
+            <div class="section">
+
+                <input type="radio" name="slide" id="sld1" class="hidden" checked>
+                <input type="radio" name="slide" id="sld2" class="hidden">
+                <input type="radio" name="slide" id="sld3" class="hidden">
+
+                <ul class="sldlist">
+
+                    <li>
+                        <div style="background-color: lightblue;"></div>
+                    </li>
+                    <li>
+                        <div style="background-color: lightgreen;"></div>
+                    </li>
+                    <li>
+                        <div style="background-color: lightcoral;"></div>
+                    </li>
+
+                </ul>
+
+                <div class="btn1">
+                    <label for="sld1" class="left"><</label>
+                    <label for="sld2" class="right">></label>
+                </div>
+
+                <div class="btn2">
+                    <label for="sld1" class="left"><</label>
+                    <label for="sld3" class="right">></label>
+                </div>
+
+                <div class="btn3">
+                    <label for="sld2" class="left"><</label>
+                    <label for="sld3" class="right">></label>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

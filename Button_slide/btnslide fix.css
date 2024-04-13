@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 1320px;
+    height: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+.section {
+    position: relative;
+    width: 1320px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.sldlist {
+    display: flex;
+}
+
+.sldlist > li {
+    transition: all 0.6s ease-out;
+}
+
+.sldlist div {
+    width: 1320px;
+    height: 300px;
+}
+
+.section label {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 40px;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+#sld1:checked ~ .sldlist > li {
+    transform: translateX(0%);
+}
+
+#sld2:checked ~ .sldlist > li {
+    transform: translateX(-100%);
+}
+
+#sld3:checked ~ .sldlist > li {
+    transform: translateX(-200%);
+}
+
+.btn2, .btn3 {
+    display: none;
+}
+
+#sld2:checked ~ .btn2 {
+    display: block;
+}
+
+#sld3:checked ~ .btn3 {
+    display: block;
+}
