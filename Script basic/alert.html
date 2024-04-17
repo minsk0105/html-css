@@ -8,8 +8,20 @@
 </head>
 <body>
     <h2 class="alert-box" id="alert">Alert
-        <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+        <button id="close">닫기</button>
     </h2>
-    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+    <button id="open">버튼</button>
+
+
+    <script>
+
+        document.getElementById('close').addEventListener("click", function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+
+        document.getElementById('open').addEventListener("click", function(){
+            document.getElementById('alert').style.display = 'block';
+        })
+    </script>
 </body>
 </html>
