@@ -59,10 +59,10 @@ a {
     background-color: black;
     line-height: 50px;
     transition: 0.4s;
+    overflow: hidden;
 }
 
 .submenu > li > a {
-    display: block;
     cursor: pointer;
 }
 
