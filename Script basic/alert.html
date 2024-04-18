@@ -8,20 +8,33 @@
 </head>
 <body>
     <h2 class="alert-box" id="alert">Alert
-        <button id="close">닫기</button>
+        <button id="close" onclick="openalert('none')">닫기</button>
     </h2>
-    <button id="open">버튼</button>
+    <button id="open" onclick="openalert('block')">열기</button>
 
 
     <script>
 
-        document.getElementById('close').addEventListener("click", function(){
-            document.getElementById('alert').style.display = 'none';
-        })
+        // document.getElementById('close').addEventListener("click", function(){
+        //     document.getElementById('alert').style.display = 'none';
+        // })
 
-        document.getElementById('open').addEventListener("click", function(){
-            document.getElementById('alert').style.display = 'block';
-        })
+        // document.getElementById('open').addEventListener("click", function(){
+        //     document.getElementById('alert').style.display = 'block';
+        // })
+
+        function openalert(a){
+            document.querySelector('#alert').style.display = a;
+        }
+
+        openalert('block');
+        openalert('none');
+
+
+
+        // function closealert(){
+        //     document.querySelector("#alert").style.display = 'none';
+        // }
     </script>
 </body>
 </html>
