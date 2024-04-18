@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 알림창 만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: default;
+        }
+
+        .alert_box {
+            padding: 20px;
+            margin: 10px;
+            background-color: lightblue;
+            border-radius: 5px;
+            display: none;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        button {
+            padding: 5px 15px;
+            border: 2px solid #3a3a3a;
+            border-radius: 9px;
+            font-weight: bold;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert_box">
+        <p id="title">Alert box</p>
+        <button onclick="btn('none');">close box</button>
+    </div>
+    <button onclick="btn('block', '아이디를 입력하세요.');">ID box</button>
+    <button onclick="btn('block', '비번을 입력하세요.');">PW box</button>
+
+    <script>
+
+        function btn(hide, text){
+            document.querySelector('.alert_box').style.display = hide;
+            document.getElementById('title').innerHTML = text;
+            document.getElementById('title').style.color = 'blue';
+        }
+
+        btn('block');
+        btn('none');
+        btn('아이디을 입력하세요.');
+        btn('비번을 입력하세요.');
+
+    </script>
+</body>
+</html>
