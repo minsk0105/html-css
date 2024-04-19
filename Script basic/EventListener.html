@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 기초</title>
+    <style>
+      .alert-box {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: lightblue;
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <h2 class="alert-box" id="alert">Alert
+        <button id="close">닫기</button>
+    </h2>
+    <button id="open">열기</button>
+
+
+    <script>
+
+      document.getElementById('open').addEventListener('click', function(){
+        document.querySelector('.alert-box').style.display = 'block';
+      })
+      
+      document.getElementById('close').addEventListener('click', function(){
+        document.querySelector('.alert-box').style.display = 'none'
+      })
+
+    </script>
+</body>
+</html>
