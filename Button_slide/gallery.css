@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 1320px;
+  height: 500px;
+  /* background-color: #efefef; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  width: 1320px;
+  height: 300px;
+  /* background-color: gray; */
+}
+
+.hidden {
+  display: none;
+}
+
+.cont {
+  position: relative;
+  left: 660px;
+  width: 1320px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+.cont div {
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  color: #3a3a3a;
+}
+
+.next {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  width: 100px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+#one:checked ~ .cont {
+  transform: translateX(-220px);
+}
+
+#two:checked ~ .cont {
+  transform: translateX(-440px);
+}
+
+#thr:checked ~ .cont {
+  transform: translateX(-660px);
+}
+
+.btn2, .btn3 {
+  display: none;
+}
+
+#one:checked ~ .btn2,
+#two:checked ~ .btn3 {
+  display: block;
+}
