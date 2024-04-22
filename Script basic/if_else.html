@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라이언과 춘식이</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <img src="https://i.namu.wiki/i/vDDaVK4wm1-vPZgAOI65rbhLhr1vPCzBgoRKSS7mEFx4IH2vtHvvMN41Umw-taptksIW_WqnjwOdcGbAMpAmrQ.webp" alt="라이언" id="ryan">
+  <img src="https://i.namu.wiki/i/GQMqb8jtiqpCo6_US7jmWDO30KfPB2MMvbdURVub61Rs6ALKqbG-nUATj-wNk7bXXWIDjiLHJxWYkTELUgybkA.webp" alt="춘식이" id="chunsik">
+
+  <script>
+
+    document.getElementById('ryan').addEventListener("click", function hide(){
+      let status = document.getElementById('chunsik').style.visibility;
+
+      if(status == '') {
+        document.getElementById('chunsik').style.visibility = 'hidden';
+      } else if(status == 'hidden') {
+        document.getElementById('chunsik').style.visibility = '';
+      }
+    })
+    
+  </script>
+</body>
+</html>
