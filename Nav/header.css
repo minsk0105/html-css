@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 견고딕;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 1320px;
+}
+
+.header {
+    width: 1320px;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    color: white;
+}
+
+.logo {
+    width: 20%;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 200;
+}
+
+.nav {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+}
+
+.menu > li {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu > li > a {
+    cursor: pointer;
+}
+
+.login {
+    width: 20%;
+}
+
+/* .menu > li:hover .submenu {
+    display: block;
+} */
+
+.submenu {
+    display: none;
+}
+
+.submenu > li {
+    width: 100px;
+    background-color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
