@@ -1,7 +1,7 @@
 document.querySelector('.menu > li').addEventListener("mouseover", function(){
-    document.querySelector('.submenu').style.display = 'block';
+    document.querySelector('.submenu').style.height = '200px';
 })
 
 document.querySelector('.menu > li').addEventListener("mouseout", function(){
-    document.querySelector('.submenu').style.display = 'none';
+    document.querySelector('.submenu').style.height = '0px';
 })

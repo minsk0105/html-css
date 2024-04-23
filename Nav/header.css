@@ -72,7 +72,9 @@ a {
 } */
 
 .submenu {
-    display: none;
+    height: 0;
+    transition: 0.4s ease-out;
+    overflow: hidden;
 }
 
 .submenu > li {
