@@ -42,14 +42,13 @@
 .box {
     position: absolute;
     top: 40px;
-    right: 270px;
+    right: 190px;
     width: 200px;
     height: 200px;
     border: 1px solid #afafaf;
     background-color: white;
     visibility: hidden;
     opacity: 0;
-    transition: 0.4s;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -60,6 +59,11 @@
     color: #7a7a7a;
     line-height: 50px;
     padding-left: 10px;
+    cursor: pointer;
+}
+
+.box p:hover {
+    background-color: #cecece;
 }
 
 .language {
@@ -67,6 +71,31 @@
     height: 35px;
     background-color: inherit;
     border: none;
+}
+
+.lang-box {
+    position: absolute;
+    top: 40px;
+    right: 110px;
+    width: 100px;
+    height: 130px;
+    border: 1px solid #afafaf;
+    background-color: white;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lang-box p {
+    font-size: 19px;
+    color: #7a7a7a;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.lang-box p:hover {
+    background-color: #cecece;
 }
 
 .desktop span {
