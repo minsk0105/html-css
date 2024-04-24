@@ -47,8 +47,8 @@
     height: 200px;
     border: 1px solid #afafaf;
     background-color: white;
-    /* visibility: hidden; */
-    /* opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
     transition: 0.4s;
     overflow: hidden;
     overflow-y: scroll;
