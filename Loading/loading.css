@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body:hover .loading span {
+  visibility: hidden;
+}
+
+.loading span {
+  display: inline-block;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  background-color: gray; 
+  border-radius: 50%;
+  animation: loading 3s linear;
+  transition: 3s;
+}
+
+.loading span:nth-child(1) {
+  animation-delay: 0s;
+  background-color: lightcoral;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+  background-color: lightsalmon;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+  background-color: lightgreen;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
