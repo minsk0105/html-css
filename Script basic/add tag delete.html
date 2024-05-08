@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add or delete tags</title>
+</head>
+<body>
+  <input type="button" value="createDiv" onclick="createDiv()">
+  <input type="button" value="deleteDiv" onclick="deleteDiv()">
+
+  <div id="cont">
+
+  </div>
+
+  <script>
+
+    function createDiv() {
+      let newDiv = document.createElement('div');
+      newDiv.innerHTML = 'hello js';
+
+      document.querySelector('#cont').appendChild(newDiv);
+
+    }
+
+    function deleteDiv() {
+      let cont  = document.getElementById('cont');
+      cont.removeChild(cont.lastChild);
+      }
+
+  </script>
+</body>
+</html>
