@@ -45,3 +45,9 @@ document.querySelector('.language').addEventListener('click', function(){
         document.querySelector('.box').style.transform = 'scaleY(0)';
     }
 })
+
+window.addEventListener('scroll', function(){
+    let fix = document.querySelector('.header');
+
+    fix.style.position = 'fixed';
+})
