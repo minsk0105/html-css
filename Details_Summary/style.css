@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: white;
+}
+
+.header {
+    width: 90%;
+    height: 100px;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+details {
+    position: relative;
+    margin: 0 20px;
+    transition: 0.4s;
+}
+
+details[open] .list {
+    animation: open linear 0.4s;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+        margin-left: -10px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+summary {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+summary::marker {
+    font-size: 0;
+}
+
+.list {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    animation: list infinite linear 3s;
+}
+
+.list > li {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+}
+
+.login {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
