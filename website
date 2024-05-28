@@ -132,3 +132,333 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* 헤더 스타일 */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: black; /* 글자색 설정 */
+    padding: 6px; /* 내부 여백 설정 */
+    display: flex; /* 헤더 요소들을 가로로 나열 */
+    justify-content: space-between; /* 요소들을 가로로 공간 분배 */
+    align-items: center; /* 요소들을 세로로 가운데 정렬 */
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+/* 로고 스타일 */
+.logo img {
+    width: 100px; /* 로고 이미지의 너비 */
+}
+
+/* 네비게이션 스타일 */
+nav ul {
+    list-style: none; /* 리스트 기호 제거 */
+    display: flex;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 10px;
+}
+
+/* 네비게이션 메뉴 스타일 */
+nav ul li a {
+    color: white; /* 링크 텍스트 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    transition: color 0.3s; /* 컬러 변화에 대한 트랜지션 효과 추가 */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 호버 효과 스타일 */
+nav ul li a:hover {
+    color: #ffc107; /* 호버 시 텍스트 색상 변경 */
+}
+
+
+/* 로그인과 회원가입 버튼 스타일 */
+.user-actions button {
+    background-color: inherit; /* 배경색 설정 */
+    color: white; /* 글자색 설정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 7px;
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: 0.5s;
+    padding: 3px 10px;
+}
+
+.user-actions button:hover {
+    background-color: #ddd; /* 마우스 호버 시 배경색 변경 */
+    color: #333;
+}
+
+/* 섹션 스타일 */
+.container {
+    position: relative; /* 자식 요소를 기준으로 위치 지정 */
+    text-align: center; /* 콘텐츠를 가운데 정렬 */
+    min-width: 100%;
+    max-height: 652px;
+    overflow: hidden;
+}
+
+/* 큰 이미지 스타일 */
+.big-image img {
+    width: 100%; /* 이미지가 부모 요소를 넘지 않도록 설정 */
+}
+
+/* 콘텐츠 스타일 */
+.content {
+    position: absolute; /* 절대 위치로 설정 */
+    top: 50%; /* 세로 방향 중앙 정렬 */
+    left: 50%; /* 가로 방향 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    z-index: 1; /* 이미지 위에 표시하기 위해 z-index 설정 */
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.content h2 {
+    font-size: 45px; /* 큰 폰트 사이즈 설정 */
+    cursor: default;
+}
+
+.content button {
+    margin-top: 20px;
+    font-size: 15px; /* 버튼 폰트 사이즈 설정 */
+    font-weight: bold;
+    background-color: white; /* 배경색 설정 */
+    color: black; /* 글자색 설정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 20px;
+    padding: 7px 20px; /* 내부 여백 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content button:hover {
+    background-color: black; /* 마우스 호버 시 배경색 변경 */
+    color: white;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    background-color: #333; /* 배경색 설정 */
+    color: #fff; /* 글자색 설정 */
+    width: 0px; /* 너비 설정 */
+    height: 100vh; /* 높이 설정 */
+    position: fixed; /* 고정 위치 설정 */
+    top: 0; /* 위에서부터 고정 */
+    right: 0; /* 왼쪽에서부터 고정 */
+    padding-top: 20px; /* 상단 패딩 설정 */
+    /* transform: scaleX(0);
+    transform-origin: left; */
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 4;
+}
+
+/* 사이드바 메뉴 스타일 */
+.sidebar-menu {
+    list-style: none; /* 리스트 기호 제거 */
+    padding: 0; /* 내부 여백 제거 */
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px; /* 항목 사이의 간격 설정 */
+}
+
+.sidebar-menu li a {
+    width: 200px;
+    color: #fff; /* 링크 텍스트 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    display: block; /* 블록 요소로 표시 */
+    padding: 10px; /* 내부 여백 설정 */
+    transition: background-color 0.3s; /* 배경색 변화에 대한 트랜지션 효과 추가 */
+}
+
+.sidebar-menu li a:hover {
+    background-color: #555; /* 호버 시 배경색 변경 */
+}
+
+#close-button {
+    margin-left: 10px;
+    padding: 3px 10px;
+    color: white;
+    font-size: 25px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.active {
+    /* transform: scaleX(1); */
+    width: 200px;
+}
+
+.introd {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box {
+    width: 500px;
+    height: 550px;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.image {
+    width: 100%;
+    height: 450px;
+    background-color: #f0f0f0; /* 이미지 대체 색상 */
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 145%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+.image img[alt=second] {
+    width: 180%;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Century Gothic;
+    cursor: default;
+}
+
+.select {
+    width: 100%;
+    height: 600px;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tab > div {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+.box-cont {
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.move {
+    width: 1200px;
+    height: 400px;
+    background-color: lightgreen;
+    display: flex;
+    overflow: hidden;
+}
+
+.move > div {
+    display: flex;
+    text-align: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+}
+
+.python {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.between {
+    width: 1200px;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+}
+
+const btn = document.getElementById('sidebar-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+btn.addEventListener('click', function() {
+    sidebar.classList.toggle('active');
+})
+
+const remo = document.querySelector('#close-button');
+
+remo.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+})
+
+
+<script>
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
+    const box = document.querySelector('.box');
+    const slider = document.getElementById('move');
+
+    left.addEventListener('click', function() {
+        if(box.style.marginLeft == '-410px') {
+            box.style.marginLeft = '';
+        }
+        else if(box.style.marginLeft == '') {
+            box.style.marginLeft = '410px';
+        }
+    })
+
+    right.addEventListener('click', function() {
+
+        if(box.style.marginLeft == '410px') {
+            box.style.marginLeft = '';
+        }
+        else if(box.style.marginLeft == '') {
+            box.style.marginLeft = '-410px'
+        }
+    })
+</script>
