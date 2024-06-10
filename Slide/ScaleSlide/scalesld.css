@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidebox {
+    width: 900px;
+    height: 350px;
+    background-color: gray;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.slidebox > div {
+    /* position: relative; */
+    /* width: 1500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: slide infinite linear 10s; */
+    transition: 1s;
+    margin-left: -300px;
+}
+
+/* @keyframes slide {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -1500px;
+    }
+} */
+
+.box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contnum {
+    width: 200px;
+    height: 250px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.buttonbox {
+    width: 900px;
+    height: 50px;
+    /* background-color: lightgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonbox button {
+    margin: 0 10px;
+    padding: 5px 15px;
+    background-color: inherit;
+    border: 2px solid gray;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonbox button:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
