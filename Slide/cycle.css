@@ -72,17 +72,32 @@ body {
   transform: scale(1.1);
 }
 
-#one:checked ~ .main > .slider {
+.arrow {
+  position: relative;
+}
+
+.btn {
+  /* position: absolute; */
+}
+
+#nonfive:checked ~ .main > .slider {
+  transform: translateX(0);
+}
+
+#one:checked ~ main > .slider {
+  transform: translateX(-300px);
+}
+
+#two:checked ~ .main > .slider {
   transform: translateX(-600px);
 }
 
-#one:checked ~ .main > .slider > .box1 > .cont1 {
+#nonfive:checked ~ .main > .slider > .box1 > .cont1,
+#two:checked ~ .main > .slider > .box1 > .cont1 {
   transform: scale(1);
 }
 
-#one:checked ~ .main > .slider > .box2 > .cont2 {
+#nonfive:checked ~ .main > .slider > .box7 > .cont7,
+#two:checked ~ .main > .slider > .box2 > .cont2 {
   transform: scale(1.1);
-}
-#nonfive:checked ~ .main > .slider {
-  transform: translateX(-300px);
 }
