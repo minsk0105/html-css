@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.mainbox {
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.mainbox > div {
+    width: 300px;
+    position: relative;
+}
+
+.contbox1 {
+    background-color: lightcoral;
+}
+.contbox2 {
+    /* background-color: skyblue; */
+}
+.contbox3 {
+    /* background-color: darkcyan; */
+}
+
+.endbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 40px;
+    background-color: lightblue;
+    z-index: 3;
+}
+
+.black {
+    position: absolute;
+    top: 360px;
+    left: 0;
+    width: 900px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 1s;
+    display: flex;
+    z-index: 1;
+}
+
+.black > div {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+}
+
+.contbox1:hover .black {
+    transform: translateY(-360px);
+}
+
+.endbox:hover ~ .black {
+    transform: translateY(-360px);
+}
+
+.good {
+    /* background-color: lightgreen; */
+    transition: 0.4s;
+    transform: translateX(600px);
+}
+
+.meet {
+    /* background-color: lightslategrey; */
+    transition: 0.4s;
+}
+
+.hello {
+    background-color: lightseagreen;
+    transition: 0.4s;
+    transform: translateX(-600px);
+    z-index: -1;
+}
+
+.meet:hover ~ .hello {
+    transform: translateX(-300px);
+}
+
+.good:hover ~ .hello {
+    transform: translateX(0);
+}
