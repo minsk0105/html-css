@@ -83,14 +83,21 @@ body {
   transform: translateX(600px);
 }
 .mve3 {
+  position: relative;
   transform: translateX(-600px);
   background-color: aliceblue;
   z-index: -1;
 }
 
+.mve3 > span {
+  position: absolute;
+  transition-delay: 0.5s;
+}
+
 .mve3 > span:nth-child(2),
 .mve3 > span:nth-child(3) {
-  display: none;
+  opacity: 0;
+  transition-delay: 0.3s;
 }
 
 .mve2:hover ~ .mve3 {
@@ -100,12 +107,15 @@ body {
 
 .mve2:hover ~ .mve3 > span:nth-child(1),
 .mve1:hover ~ .mve3 > span:nth-child(1) {
-  display: none;
+  transition-delay: 0.3s;
+  visibility: hidden;
 }
 
 .mve2:hover ~ .mve3 > span:nth-child(2),
 .mve1:hover ~ .mve3 > span:nth-child(3) {
-  display: block;
+  visibility: visible;
+  transition-delay: 0.3s;
+  opacity: 1;
 }
 
 .mve1:hover ~ .mve3 {
