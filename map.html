@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>map</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: default;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .img {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .img > div {
+      position: absolute;
+      top: 30px;
+      left: 420px;
+      width: 30px;
+      height: 30px;
+      background-color: gray;
+      animation: move infinite linear 10s;
+    }
+
+    @keyframes move {
+      0% {
+        /* left: 0; */
+      }
+      17% {
+        top: 140px;
+        margin-left: -80px;
+      }
+      34% {
+        top: 240px;
+        margin-left: 5px;
+      }
+      51% {
+        top: 340px;
+        margin-left: -130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="img">
+      <img src="map.png" alt="">
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>
