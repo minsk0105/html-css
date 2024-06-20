@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.wrap {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 1320px;
+    height: 90px;
+    background-color: black;
+}
