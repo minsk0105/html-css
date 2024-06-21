@@ -1,0 +1,241 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 1320px;
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.selectbox {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.sbtn, .push {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.selectbox > label[class='sbtn'] {
+    display: none;
+}
+
+#korea:hover ~ .header > .selectbox > label[name='ko'],
+#france:hover ~ .header > .selectbox > label[name='fa'],
+#bosnia:hover ~ .header > .selectbox > label[name='bo'],
+#kosovo:hover ~ .header > .selectbox > label[name='kv'],
+#spain:hover ~ .header > .selectbox > label[name='sp'],
+#mexico:hover ~ .header > .selectbox > label[name='mx'] {
+    display: block;
+}
+
+#korea:checked ~ .header > .selectbox > label[name='ko'],
+#france:checked ~ .header > .selectbox > label[name='fa'],
+#bosnia:checked ~ .header > .selectbox > label[name='bo'],
+#kosovo:checked ~ .header > .selectbox > label[name='kv'],
+#spain:checked ~ .header > .selectbox > label[name='sp'],
+#mexico:checked ~ .header > .selectbox > label[name='mx'] {
+    display: block;
+}
+
+.contbox {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 250px;
+    height: 0;
+    background-color: #efefef;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.cont {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cont:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+#click:checked ~ .header > .selectbox > .contbox {
+    height: 300px;
+}
+
+.product {
+    width: 1320px;
+    position: relative;
+}
+
+main > div {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    font-size: 20px;
+}
+
+.two,
+.thr,
+.fou,
+.fiv,
+.six {
+    display: none;
+}
+
+.one {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.good {
+    display: flex;
+    margin-top: 30px;
+}
+
+.godbox {
+    position: relative;
+    margin: 0 30px;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img {
+    width: 250px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img > img {
+    width: 250px;
+}
+
+.img > img[alt='lotte'] {
+    width: 280px;
+}
+
+.img > img[alt='dokdo'] {
+    width: 420px;
+}
+
+.img > img[alt='songdo'] {
+    width: 300px;
+}
+
+.godbox > span {
+    position: absolute;
+    top: 205px;
+    left: 10px;
+    font-size: 25px;
+}
+
+.godbox > button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 15px;
+    margin: 6px;
+    background-color: inherit;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.godbox button:hover {
+    background-color: black;
+    color: white;
+}
+
+.two > div,
+.thr > div,
+.fou > div,
+.fiv > div,
+.six > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.two {
+    background-color: lightcoral;
+}
+.thr {
+    background-color: lightyellow;
+}
+.fou {
+    background-color: lightgreen;
+}
+.fiv {
+    background-color: lightslategray;
+}
+.six {
+    background-color: lightsalmon;
+}
+
+#france:checked ~ .product > .one,
+#bosnia:checked ~ .product > .one,
+#kosovo:checked ~ .product > .one,
+#spain:checked ~ .product > .one,
+#mexico:checked ~ .product > .one {
+    display: none;
+}
+
+#france:checked ~ .product > .two,
+#bosnia:checked ~ .product > .thr,
+#kosovo:checked ~ .product > .fou,
+#spain:checked ~ .product > .fiv,
+#mexico:checked ~ .product > .six {
+    display: block;
+}
