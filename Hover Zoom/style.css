@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: all-scroll;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 500px;
+  height: 500px;
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+.hidden {
+  width: 200px;
+  height: 500px;
+  /* background-color: gray; */
+}
+
+.hello6 {
+  position: absolute;
+  left: 100px;
+  width: 300px;
+  height: 50%;
+}
+
+.hello7 {
+  position: absolute;
+  left: 100px;
+  width: 300px;
+  height: 50%;
+}
+
+.hello2,
+.hello3,
+.hello6,
+.hello7 {
+  background-color: white;
+}
+
+.hello2:hover,
+.hello3:hover,
+.hello6:hover,
+.hello7:hover {
+  background-color: inherit;
+}
+
+.one, .two {
+  display: flex;
+}
+
+.one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.one > div,
+.two > div {
+  width: 50%;
+}
+
+.two {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 200px;
+  transform: translateY(-50%);
+}
+
+.three > .hello5,
+.four > .hello8 {
+  width: 100%;
+  height: 50%;
+}
+
+.four {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 200px;
+  transform: translateY(50%);
+}
+
+.side {
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+  position: absolute;
+  z-index: 3;
+}
+
+.top {
+  top: 0;
+  left: 0;
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.left {
+  top: 0;
+  right: 0;
+}
+
+.right {
+  bottom: 0;
+  right: 0;
+}
+
+.top:hover {
+  background-color: lightblue;
+}
+
+.top:hover ~ .one > .hello2,
+.top:hover ~ .three > .hello6 {
+  background-color: lightblue;
+}
