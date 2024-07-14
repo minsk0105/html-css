@@ -15,6 +15,7 @@ body {
 .img-container {
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .img {
@@ -51,11 +52,14 @@ body {
   background-color: white;
 }
 
-.hello2:hover,
-.hello3:hover,
 .hello6:hover,
 .hello7:hover {
   background-color: inherit;
+}
+
+.hello2:hover .good2,
+.hello3:hover .good2 {
+  background-color: lightblue;
 }
 
 .one, .two {
@@ -108,7 +112,7 @@ body {
 .side {
   width: 100px;
   height: 100px;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   position: absolute;
   z-index: 3;
 }
@@ -133,11 +137,39 @@ body {
   right: 0;
 }
 
-.top:hover {
+.top:hover,
+.bottom:hover,
+.left:hover,
+.right:hover {
   background-color: lightblue;
 }
 
-.top:hover ~ .one > .hello2,
+.top:hover ~ .one > .hello2 > .good2,
 .top:hover ~ .three > .hello6 {
   background-color: lightblue;
+}
+
+.bottom:hover ~ .one > .hello2 > .good2,
+.bottom:hover ~ .four > .hello7 {
+  background-color: lightblue;
+}
+
+.left:hover ~ .two > .hello3 > .good2,
+.left:hover ~ .three > .hello6 {
+  background-color: lightblue;
+}
+
+.right:hover ~ .two > .hello3 > .good2,
+.right:hover ~ .four > .hello7 {
+  background-color: lightblue;
+}
+
+.good1, .good3 {
+  width: 100px;
+  height: 100px;
+}
+
+.good2 {
+  width: 100px;
+  height: 300px;
 }
