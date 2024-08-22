@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last_expend</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: default;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .circle {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -75px;
+            margin-left: -75px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid black;
+            transition: 1s ease;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .close-btn {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: 1s ease;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .close-btn i {
+            font-size: 30px;
+            cursor: pointer;
+            transition: 1s ease;
+            transform: rotate(270deg);
+        }
+
+        .expend-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* z-index: -1; */
+        }
+
+        .line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line > div {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            margin: 2.5px;
+            transition: all 1s ease;
+        }
+
+        .one {
+            justify-content: right;
+            align-items: end;
+        }
+        .two {
+            justify-content: center;
+            align-items: end;
+        }
+        .thr {
+            justify-content: left;
+            align-items: end;
+        }
+        .fou {
+            justify-content: right;
+            align-items: center;
+        }
+        .fiv {
+            justify-content: center;
+            align-items: center;
+        }
+        .six {
+            justify-content: left;
+            align-items: center;
+        }
+        .sev {
+            justify-content: right;
+            align-items: start;
+        }
+        .eig {
+            justify-content: center;
+            align-items: start;
+        }
+        .nin {
+            justify-content: left;
+            align-items: start;
+        }
+
+
+        .one img {
+            transition-delay: .1s;
+        }
+        .two img {
+            transition-delay: .2s;
+        }
+        .thr img {
+            transition-delay: .3s;
+        }
+        .fou img {
+            transition-delay: .4s;
+        }
+        .fiv img {
+            transition-delay: .5s;
+        }
+        .six img {
+            transition-delay: .6s;
+        }
+        .sev img {
+            transition-delay: .7s;
+        }
+        .eig img {
+            transition-delay: .8s;
+        }
+        .nin img {
+            transition-delay: .9s;
+        }
+
+        .line > div > div {
+            display: flex;
+            background-color: black;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            transition: all 1s ease;
+            opacity: 0;
+        }
+
+        .first > div {
+            transition-delay: 0.1s;
+        }
+        .second > div {
+            transition-delay: 0.4s;
+        }
+        .third > div {
+            transition-delay: 0.7s;
+        }
+
+        #show:checked ~ .expend-container > .expend > .line img {
+            opacity: 1;
+        }
+
+        #show:checked ~ .circle {
+            transform: translateY(300%);
+            cursor: default;
+        }
+
+        #show:checked ~ .circle > .close-btn {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #show:checked ~ .circle > .close-btn i {
+            transform: rotate(0);
+        }
+
+        #show:checked ~ .expend-container > .expend > .line img,
+        #show:checked ~ .expend-container > .expend > .line > div {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <input type="radio" name="expend" id="show" class="hidden">
+        <input type="radio" name="expend" id="remove" class="hidden">
+
+        <label for="show" class="circle">
+            <label for="remove" class="close-btn">
+                <i class="fa-solid fa-x"></i>
+            </label>
+        </label>
+
+        <div class="expend-container">
+            <div class="expend">
+                <div class="line first">
+                    <div class="one"><div><img src="img/01.jpg" alt=""></div></div>
+                    <div class="two"><div><img src="img/02.jpg" alt=""></div></div>
+                    <div class="thr"><div><img src="img/03.jpg" alt=""></div></div>
+                </div>
+
+                <div class="line second">
+                    <div class="fou"><div><img src="img/04.jpg" alt=""></div></div>
+                    <div class="fiv"><div><img src="img/05.jpg" alt=""></div></div>
+                    <div class="six"><div><img src="img/06.jpg" alt=""></div></div>
+                </div>
+
+                <div class="line third">
+                    <div class="sev"><div><img src="img/07.jpg" alt=""></div></div>
+                    <div class="eig"><div><img src="img/08.jpg" alt=""></div></div>
+                    <div class="nin"><div><img src="img/09.jpg" alt=""></div></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
