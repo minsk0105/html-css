@@ -25,7 +25,6 @@ body {
 .slidebox {
     width: 900px;
     height: 350px;
-    /* background-color: gray; */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -33,23 +32,11 @@ body {
 }
 
 .slidebox > div {
-    /* position: relative; */
-    /* width: 1500px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: slide infinite linear 10s; */
     transition: 1s;
 }
-
-/* @keyframes slide {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -1500px;
-    }
-} */
 
 .box {
     width: 300px;
@@ -62,7 +49,6 @@ body {
 .contnum {
     width: 200px;
     height: 250px;
-    /* background-color: lightblue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +58,6 @@ body {
 .buttonbox {
     width: 900px;
     height: 50px;
-    /* background-color: lightgreen; */
     display: flex;
     justify-content: center;
     align-items: center;
